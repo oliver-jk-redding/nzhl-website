@@ -1,11 +1,11 @@
-setPageWrapperHeight()
+/*setPageWrapperHeight()
 
 function setPageWrapperHeight() {
   var pageWrapper = document.querySelector(".upper-page.wrapper");
   var heroHeight = document.querySelector(".carousel").clientHeight;  
   pageWrapper.style.height = heroHeight + "px";
 }
-window.addEventListener("resize", setPageWrapperHeight);
+window.addEventListener("resize", setPageWrapperHeight);*/
 
 var imgWrapper = document.querySelector(".hero-carousel");
 var imgNum = Math.floor((Math.random() * 9));
