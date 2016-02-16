@@ -3,24 +3,30 @@ html {
   background-size: 100%;
 }
 
+body{
+    overflow-x:hidden;
+}
+
 /*Hero
 ___________________________*/
 
 .hero.wrapper { 
   position: absolute; 
-  width: 99vw;
+  width: 100vw;
   max-height: 100vh;
   overflow: hidden;
 }
 
 .carousel {  
-  width: 100vw;  
+  width: 100vw;
+  /*max-height: 100vh;*/
+  overflow: hidden;
 }
 
 .hero.header {
   position: absolute;  
-  top: 55%;
-  transform: translateY(-45%);
+  top: 50%;
+  transform: translateY(-50%);
   left: 9%;
   z-index: 2;   
   vertical-align: middle;
