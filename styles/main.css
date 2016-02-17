@@ -10,7 +10,7 @@ body{
 /*Hero
 ___________________________*/
 
-.hero.wrapper {   
+.carousel.wrapper {   
   width: 100vw;
   max-height: 100vh;
   overflow: hidden;
@@ -21,10 +21,9 @@ ___________________________*/
   overflow: hidden;
 }
 
-.hero.header {
+.hero.wrapper {
   position: absolute;  
-  transform: translateY(-210%);
-  z-index: 3;   
+  transform: translateY(-200%);
   width: 100vw;
   display: -webkit-flex;
   display: flex;
@@ -43,14 +42,15 @@ ___________________________*/
   position: absolute;      
   transform: translateY(-150%);
   display: -webkit-flex;
-  display: flex; 
+  display: flex;
+  z-index: 0; 
 }
 
-.arrow {    
+.arrow { 
   margin: 0 auto;      
   width: 8vw;
   height: 8vw;
-  z-index: 3;
+  z-index: -1;
 }
 
 /*Navbar
@@ -69,42 +69,84 @@ ___________________________*/
   top: 0;
   z-index: 100;
   width:100%;
-  height:8rem;
+  height:10vh;
   margin: 0;
   padding: 0;  
   color: white;  
   background-color: rgba(0,0,0,0.8);  
 }
 
-.one.column.nzhllogo {
-  margin:1rem;  
-  height:6rem;
+#nzhllogo {   
+  width: 8vh;
+  height: 8vh;
+  margin: 1vh;
   background: url('../images/nzhl-logo-white-nb.png');
   background-size: contain;
   background-repeat: no-repeat;
+  float: left;
 }
 
-.navbar ul {
-  list-style-type: none;
-  text-align: center;
-  margin-right: 10rem;  
+.navbar ul {  
+  margin: 0;
+  height: 10vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  z-index: 100;  
 }
 
 .navbar li {
-  margin: 2px 0px 0px 0px;
+  margin: 0;
+  width: 13.33%;
   text-align: center;  
-  float: right;  
   text-transform: uppercase; 
+  list-style-type: none;
+  font-size: 2vh;
+  z-index: 100;
+}
+
+.navbar a {
+  padding: 2vh 2vw;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a:hover {
+  padding: 2vh 2vw;
+  text-decoration: none;  
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+.navbar a:active {
+  padding: 2vh 2vw;
+  text-decoration: none;  
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;  
+}
+
+.navbar.landed {
+  padding: 2vh 2vw;
+  text-decoration: none;  
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 2px;
 }
 
 /*Main
 ___________________________*/
 
 .container.main {
-  margin-top: 3rem
+  margin-top: 3rem;
+  z-index: -1;
 }
 
 .content {  
   padding: 2rem;
+  z-index: -1;
 }
-
