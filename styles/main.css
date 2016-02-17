@@ -46,11 +46,21 @@ ___________________________*/
   z-index: 0; 
 }
 
-.arrow { 
+.arrow a:hover {
+  background-image: url('../images/down-arrow-fill.png');
+}
+
+.arrow a { 
   margin: 0 auto;      
-  width: 8vw;
-  height: 8vw;
-  z-index: -1;
+  width: 6vw;
+  height: 6vw;
+  z-index: 0;
+  border-radius: 50%;
+  border: 1px solid black;
+  border-style: hidden;
+  overflow: hidden;
+  background-image: url('../images/down-arrow-fill2.png');
+  background-size: contain;
 }
 
 /*Navbar
@@ -69,7 +79,7 @@ ___________________________*/
   top: 0;
   z-index: 100;
   width:100%;
-  height:10vh;
+  height:8vh;
   margin: 0;
   padding: 0;  
   color: white;  
@@ -77,18 +87,24 @@ ___________________________*/
 }
 
 #nzhllogo {   
-  width: 8vh;
-  height: 8vh;
-  margin: 1vh;
+  width: 6.5vh;
+  height: 6.5vh;
+  margin: 0.75vh;
+  margin-left: 2vh;
+  padding: 0;
   background: url('../images/nzhl-logo-white-nb.png');
   background-size: contain;
   background-repeat: no-repeat;
   float: left;
+  border-radius: 50%;
+  border: 1px solid black;
+  border-style: hidden;
+  overflow: hidden;
 }
 
 .navbar ul {  
   margin: 0;
-  height: 10vh;
+  height: 8vh;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -104,34 +120,34 @@ ___________________________*/
   text-align: center;  
   text-transform: uppercase; 
   list-style-type: none;
-  font-size: 2vh;
+  font-size: 1.8vh;
   z-index: 100;
 }
 
 .navbar a {
-  padding: 2vh 2vw;
+  padding: 1vh 1vw;
   text-decoration: none;
   color: white;
 }
 
-.navbar a:hover {
-  padding: 2vh 2vw;
+.navs a:hover {
+  padding: 1vh 1vw;
   text-decoration: none;  
   border-style: solid;
   border-radius: 5px;
   border-width: 2px;
 }
 
-.navbar a:active {
-  padding: 2vh 2vw;
+.navs a:active {
+  padding: 1vh 1vw;
   text-decoration: none;  
   border-style: solid;
   border-radius: 5px;
   border-width: 2px;  
 }
 
-.navbar.landed {
-  padding: 2vh 2vw;
+.navs.landed {
+  padding: 1vh 1vw;
   text-decoration: none;  
   border-style: solid;
   border-radius: 5px;
@@ -142,11 +158,11 @@ ___________________________*/
 ___________________________*/
 
 .container.main {
-  margin-top: 3rem;
+  padding-top: 8vh;
   z-index: -1;
 }
 
 .content {  
-  padding: 2rem;
+  padding: 1vh 0;
   z-index: -1;
 }

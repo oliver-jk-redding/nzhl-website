@@ -8,7 +8,7 @@ function drawCarousel() {
 }
 
 function drawMenu() {
-  document.getElementById('navs').innerHTML = 
+  document.querySelector('.navs').innerHTML = 
     "<li><a id=\"home-link\" href=\"index.html\">Home</a></li>" +
     "<li><a id=\"news-link\" href=\"news.html\">News</a></li>" +
     "<li><a id=\"about-link\" href=\"about.html\">About</a></li>" +
@@ -18,34 +18,38 @@ function drawMenu() {
     "<li><a id=\"store-link\" href=\"store.html\">Store</a></li>";
   switch (document.querySelector('title').text) {
     case "NZHL Home":
-      document.getElementById('home-link').className="navbar landed";
+      document.getElementById('home-link').className="navs landed";
       break;
     case "NZHL About":
-      document.getElementById('about-link').className="navbar landed";
+      document.getElementById('about-link').className="navs landed";
       break;
     case "NZHL News":
-      document.getElementById('news-link').className="navbar landed";
+      document.getElementById('news-link').className="navs landed";
       break;
     case "NZHL Contact":
-      document.getElementById('contact-link').className="navbar landed";
+      document.getElementById('contact-link').className="navs landed";
       break;
     case "NZHL Hobby":
-      document.getElementById('hobby-link').className="navbar landed";
+      document.getElementById('hobby-link').className="navs landed";
       break;
     case "NZHL Gallery":
-      document.getElementById('gallery-link').className="navbar landed";
+      document.getElementById('gallery-link').className="navs landed";
       break; 
     case "NZHL Store":
-      document.getElementById('store-link').className="navbar landed";
+      document.getElementById('store-link').className="navs landed";
       break;  
 }}
 
-/*var arrowScroll = document.querySelector(".arrow.wrapper");
-function hoverArrow() {  
-  arrowScroll.innerHTML = "<img src=\"images/down-arrow-fill.png\" class=\"arrow\">";
-}
-function deHoverArrow() {  
-  arrowScroll.innerHTML = "<img src=\"images/down-arrow-fill2.png\" class=\"arrow\">";
-}
-document.querySelector('.arrow').addEventListener('mouseover', hoverArrow);
-document.querySelector('.arrow').addEventListener('mouseout', deHoverArrow);*/
+$.scrollify({
+    section : "section",
+    sectionName : "section-name",
+    easing: "easeOutExpo",
+    scrollSpeed: 1100,
+    offset : 0,
+    scrollbars: true,
+    standardScrollElements: "",
+    before:function() {},
+    after:function() {},
+    afterResize:function() {},
+    afterRender:function() {}
+  });
