@@ -15,7 +15,10 @@ function drawMenu() {
     "<li><a id=\"contact-link\" href=\"#\">Contact</a></li>" +
     "<li><a id=\"hobby-link\" href=\"hobby.html\">Hobby</a></li>" +
     "<li><a id=\"gallery-link\" href=\"gallery.html\">Gallery</a></li>" +
-    "<li><a id=\"store-link\" href=\"store.html\">Store</a></li>";
+    "<li><a id=\"store-link\" href=\"store.html\">Store</a></li>" +
+    // "<i href=\"https://www.facebook.com/groups/826723854039078/\" class=\'icon-facebook\'></i>";
+    // "<i class=\'icon-facebook\'><a href=\"https://www.facebook.com/groups/826723854039078/\"></a></i>";
+    "<a class=\'icon-facebook\' href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\"></a>";
   switch (document.querySelector('title').text) {
     case "NZHL Home":
       document.getElementById('home-link').className="navs landed";
@@ -40,16 +43,35 @@ function drawMenu() {
       break;  
 }}
 
-$.scrollify({
-    section : "section",
-    sectionName : "section-name",
-    easing: "easeOutExpo",
-    scrollSpeed: 1100,
-    offset : 0,
-    scrollbars: true,
-    standardScrollElements: "",
-    before:function() {},
-    after:function() {},
-    afterResize:function() {},
-    afterRender:function() {}
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
   });
+});
+
+var lastScrollTop = 0;
+$(window).scroll(function(event) {
+  var st = $(this).scrollTop();
+  carouselHeight = $('#top').height();
+  if (st < carouselHeight && st > lastScrollTop) {
+    lastScrollTop = st;    
+    goToByScroll('feature-start')
+    $(window).off( "scroll" );
+  }
+});
+
+function goToByScroll(id){
+  $('html,body').animate({
+    scrollTop: $("#"+id).offset().top
+  },
+  'fast');    
+}
