@@ -19,6 +19,10 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" href="styles/main.css">
@@ -31,46 +35,141 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="js/jQuery.js"></script>
 
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="upper-page wrapper" id="top">
+  <div class="upper-page wrapper" id="l-top">
 
-    <div class="carousel wrapper">
-      <img src="images/carousel-pics/carousel-0.jpg" alt="NZHL Hobby" class="carousel">
+    <div class="wallpaper wrapper">
     </div>  
     <div class="hero wrapper">        
       <img src="images/hero-logo-b.png" alt="nzhllogo" class="logo-heading">            
     </div>
     <div class="arrow wrapper">
-      <a href="#feature-start"></a>         
+      <a href="#l-feature-start"></a>         
     </div>
 
     <div class="navbar wrapper"> 
       <div class="row navbar">
-        <a href="#top" id="nzhllogo"></a> 
+        <a href="#l-top" id="nzhllogo"></a> 
         <nav>         
           <ul class="navs">
           </ul>  
         </nav>
-        <!-- <i class='icon-facebook'></i> -->
       </div>
     </div>
 
   </div> 
 
-  <div class="container main" id="feature-start">
+  <div class="container main" id="l-feature-start">
     <div class="row">
 
       <div class="two-thirds column content posts">
-        <h2>Recent Posts</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-      </div>
+        <h2>Latest News</h2>
+        <!-- <div class="content-box"> -->              
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+              <li data-target="#myCarousel" data-slide-to="4"></li>
+              <li data-target="#myCarousel" data-slide-to="5"></li>
+              <li data-target="#myCarousel" data-slide-to="6"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="images/carousel-pics/carousel-1.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>                
+              </div>
+
+              <div class="item">
+                <img src="images/carousel-pics/carousel-2.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="images/carousel-pics/carousel-3.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="images/carousel-pics/carousel-4.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="images/carousel-pics/carousel-5.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="images/carousel-pics/carousel-6.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="images/carousel-pics/carousel-7.jpg" alt="Latest News">
+                <div class="carousel-content">
+                  <h3>Hello</h3>
+                  <h5>28 January 2016</h5>
+                  <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
+                  <button class="content-btn">Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      <!-- </div> -->
 
       <div class="one-third column content events">
         <h2>Upcoming Events</h2>

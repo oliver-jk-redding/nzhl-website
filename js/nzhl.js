@@ -2,9 +2,9 @@ drawCarousel();
 drawMenu();
 
 function drawCarousel() {
-  var imgWrapper = document.querySelector(".carousel.wrapper");
+  var imgWrapper = document.querySelector(".wallpaper.wrapper");
   var imgNum = Math.floor((Math.random() * 9));
-  imgWrapper.innerHTML = "<img src=\"images/carousel-pics/carousel-" + imgNum + ".jpg\" alt=\"NZHL Hobby\" width=\"\" class=\"carousel\">";
+  imgWrapper.innerHTML = "<img src=\"images/wallpaper-pics/wallpaper-" + imgNum + ".jpg\" alt=\"NZHL Hobby\" width=\"\" class=\"wallpaper\">";
 }
 
 function drawMenu() {
@@ -16,8 +16,6 @@ function drawMenu() {
     "<li><a id=\"hobby-link\" href=\"hobby.html\">Hobby</a></li>" +
     "<li><a id=\"gallery-link\" href=\"gallery.html\">Gallery</a></li>" +
     "<li><a id=\"store-link\" href=\"store.html\">Store</a></li>" +
-    // "<i href=\"https://www.facebook.com/groups/826723854039078/\" class=\'icon-facebook\'></i>";
-    // "<i class=\'icon-facebook\'><a href=\"https://www.facebook.com/groups/826723854039078/\"></a></i>";
     "<a class=\'icon-facebook\' href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\"></a>";
   switch (document.querySelector('title').text) {
     case "NZHL Home":
@@ -44,7 +42,7 @@ function drawMenu() {
 }}
 
 $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
+  $('a[href*="#l"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -61,10 +59,10 @@ $(function() {
 var lastScrollTop = 0;
 $(window).scroll(function(event) {
   var st = $(this).scrollTop();
-  carouselHeight = $('#top').height();
+  carouselHeight = $('#l-top').height();
   if (st < carouselHeight && st > lastScrollTop) {
     lastScrollTop = st;    
-    goToByScroll('feature-start')
+    goToByScroll('l-feature-start')
     $(window).off( "scroll" );
   }
 });
