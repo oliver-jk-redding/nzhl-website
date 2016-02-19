@@ -1,6 +1,7 @@
 html {
   background-image: url('../images/middle-earth-map.jpg');
   background-size: 100%;
+  background-attachment: fixed;
 }
 
 body{
@@ -81,7 +82,9 @@ ___________________________*/
   z-index: 100; 
   width: 100%;
   margin: 0;
-  padding: 0;  
+  padding: 0;
+  border-style: none;
+  border-radius: 0;  
 }
 
 .row.navbar {
@@ -89,6 +92,8 @@ ___________________________*/
   top: 0;
   z-index: 100;
   width:100%;
+  border-style: none;
+  border-radius: 0;
   height:8vh;
   margin: 0;
   padding: 0;  
@@ -117,17 +122,19 @@ ___________________________*/
   z-index: 100;
   margin: 0;
   height: 8vh;
+  max-width: 90%;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  z-index: 100;  
+  z-index: 100;    
 }
 
 .navs li {
-  margin: 0;
+  margin: 0 1vw;
+  padding: 3vh 0;
   width: 13.33%;
   text-align: center;  
   text-transform: uppercase; 
@@ -139,44 +146,32 @@ ___________________________*/
 
 .navs a {
   z-index: 100;
-  padding: 1vh 1vw;
+  padding: 3vh 2vw;
   text-decoration: none;
-  color: white;
+  color: white;  
+  box-sizing: initial;
+}
+
+.navs li:hover {  
+  text-decoration: none;  
+  background-color: rgb(166,12,12);
+  box-shadow: 0px 0px 5px 2px grey;
+  text-shadow: 1px 1px 1px black;  
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
-  box-sizing: initial;
 }
 
-.navs a:hover {
-  z-index: 100;
-  padding: 1vh 1vw;
-  text-decoration: none;  
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 2px;
-  box-sizing: initial;
+.navs li:active {  
+  background-color: rgb(166,12,12);
+  box-shadow: 0px 0px 5px 4px grey;
 }
 
-.navs a:active {
-  z-index: 100;
-  padding: 1vh 1vw;
-  text-decoration: none;  
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 2px;  
-  box-sizing: initial;
-}
-
-.navs.landed {
-  z-index: 100;
-  padding: 1vh 1vw;
-  text-decoration: none;  
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 2px;
-  box-sizing: initial;
+.navs.landed {  
+  background-color: rgb(166,12,12);
+  box-shadow: 0px 0px 2px 1px grey;
+  text-shadow: 1px 1px 1px black;
 }
 
 a.icon-facebook {
@@ -184,7 +179,7 @@ a.icon-facebook {
   height: 3.3vh;
   width: 3.3vh;
   padding: 0;
-  margin: 0.5vh;
+  margin: 1vh;
   background-image: url('../images/facebook-icon-w.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -200,7 +195,7 @@ a.icon-facebook {
 a.icon-facebook:hover {
   z-index: 100;
   margin: 0;
-  padding: 0.5vh;
+  padding: 1vh;
   background-image: url('../images/facebook-icon-bw.png');
   border-style: hidden;
   border-radius: 50%;
@@ -230,43 +225,159 @@ ___________________________*/
   z-index: 2;
 }
 
+.carousel-indicators {   
+  margin-bottom: 0;
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .carousel-indicators {
+    display: inline-block;
+  }   
+}
+
+@media (min-width: 1000px) {
+  .carousel-indicators {
+    bottom: 4rem;
+    display: inline-block;
+  }   
+}
+
+@media (min-width: 1200px) {
+  .carousel-indicators {
+    bottom: 6rem;
+  }   
+}
+
+.carousel-indicators li.active {
+  background-color: rgb(166,12,12);
+}
+
 .carousel-content {
+  top: 0;
+  width: 100%;
+  height: 100%;  
+  text-align: center;
   background-color: rgba(0,0,0,0.6);
   position: absolute;
-  padding: 0 10rem;
-  color: white;
-  top: 47%;
-  transform: translateY(-53%);
+  padding: 4rem 6rem 0rem 6rem;
+  color: white;  
   z-index: 3;
+}
+
+@media (min-width: 560px) {
+  .carousel-content {
+    padding: 1rem 4.5rem 0rem 4.5rem;         
+  }   
+}
+
+@media (min-width: 560px) {
+  .carousel-content {
+    padding: 3rem 7rem 0rem 7rem;        
+  }   
+}
+
+@media (min-width: 1000px) {
+  .carousel-content {
+    padding: 0 10rem;     
+    text-align: left;    
+  }   
+}
+
+@media (min-width: 1100px) {
+  .carousel-content {
+    padding: 2.5rem 10rem;     
+  }   
+}
+
+@media (min-width: 1150px) {
+  .carousel-content {
+    top: 50%;
+    transform: translateY(-50%);
+    height: initial;
+  }   
 }
 
 .carousel-content h3 {
   margin-top: 2rem;
   margin-bottom: 0rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: .2rem;
   font-weight: 600;
 }
 
-.carousel-content h5 {
+.carousel-content h4 {
   margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: rgb(166,166,166);  
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgb(166,12,12);
 }
 
 .carousel-content p {
   margin-bottom: 2rem;
+  display: none;
 }
 
-.carousel-content button {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+@media (min-width: 1000px) {
+  .carousel-content p {
+    display: inline-block; 
+  }   
+}
+
+.carousel-content button, .carousel-content button::after {
+  margin-bottom: 4rem;
+  padding: 1rem;
   background-color: rgb(33,33,33);
   color: white;
   border-style: none;
   line-height: 0;
-  height: 0;
+  height: 16px;
   border-radius: 0px;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  text-align: center;
+  width: 117px;  
 }
 
-.carousel-content button:hover {
+.carousel-content button::after {
+  display: none;
+}
+
+.carousel-content button::after {
+  content: "";
+  margin-bottom: 0;
+  margin-left: 12px;
+  background-image: url(../images/learn-more-button-icon.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  height: 16px;
+  width: 16px
+}
+
+.carousel-content button:hover, .carousel-content button:hover::after {
   background-color: rgb(166,12,12);
+  box-shadow: 0px 0px 3px 0px grey;
+  text-shadow: 1px 1px 1px black;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;  
+}
+
+.carousel-content button:active, .carousel-content button:active::after {
+  background-color: rgb(166,12,12);
+  box-shadow: 0px 0px 5px 1px grey;
+}
+
+@media (min-width: 1000px) {
+  .carousel-content button::after {
+    display:inline-block;
+  }
 }

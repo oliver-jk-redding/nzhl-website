@@ -9,13 +9,13 @@ function drawCarousel() {
 
 function drawMenu() {
   document.querySelector('.navs').innerHTML = 
-    "<li><a id=\"home-link\" href=\"index.html\">Home</a></li>" +
-    "<li><a id=\"news-link\" href=\"news.html\">News</a></li>" +
-    "<li><a id=\"about-link\" href=\"about.html\">About</a></li>" +
-    "<li><a id=\"contact-link\" href=\"#\">Contact</a></li>" +
-    "<li><a id=\"hobby-link\" href=\"hobby.html\">Hobby</a></li>" +
-    "<li><a id=\"gallery-link\" href=\"gallery.html\">Gallery</a></li>" +
-    "<li><a id=\"store-link\" href=\"store.html\">Store</a></li>" +
+    "<li id=\"home-link\"><a href=\"index.html\">Home</a></li>" +
+    "<li id=\"news-link\"><a href=\"news.html\">News</a></li>" +
+    "<li id=\"about-link\"><a href=\"about.html\">About</a></li>" +
+    "<li id=\"contact-link\"><a href=\"#\">Contact</a></li>" +
+    "<li id=\"hobby-link\"><a href=\"hobby.html\">Hobby</a></li>" +
+    "<li id=\"gallery-link\"><a href=\"gallery.html\">Gallery</a></li>" +
+    "<li id=\"store-link\"><a href=\"store.html\">Store</a></li>" +
     "<a class=\'icon-facebook\' href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\"></a>";
   switch (document.querySelector('title').text) {
     case "NZHL Home":
