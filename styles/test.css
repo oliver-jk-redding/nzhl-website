@@ -1,0 +1,28 @@
+@media (min-width: 400px) {
+  .ul.flexnav.one-page.oredds {
+    top: 0;
+  }   
+}
+
+ul.flexnav.one-page.oredds {
+  width: 100%;
+  max-width: 100%;
+  position: fixed;    
+  left: 0;
+  max-height: initial;
+  padding: 0;
+  background-color: #a6a6a2;
+}
+
+.menu-button {
+  position: fixed;
+  padding: 0;
+  height: 8vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+p {
+  width: 200;
+}

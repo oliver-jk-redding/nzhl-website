@@ -21,10 +21,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link href="styles/flexnav.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="styles/main.css">
 
   <!-- Favicon
@@ -59,9 +59,11 @@
       <div class="row navbar">
         <a href="#l-top" id="nzhllogo"></a> 
         <nav>         
-          <ul class="navs">
+          <ul class="flexnav one-page navs">
           </ul>  
         </nav>
+        <a href="https://www.facebook.com/groups/826723854039078/" class="icon-facebook" target="_blank"></a>
+        <div class="menu-button"></div>
       </div>
     </div>
 
@@ -97,7 +99,7 @@
                 </div>                
               </div>
 
-              <!-- <div class="item">
+              <div class="item">
                 <img src="images/carousel-pics/carousel-2.jpg" alt="Latest News">
                 <div class="carousel-content">
                   <h3>Hello</h3>
@@ -155,7 +157,7 @@
                   <p>It's here. The moment you've been waiting for. Dozens of players are arriving at the Zone in Auckland.</p>
                   <button class="content-btn">Learn More</button>
                 </div>
-              </div> -->
+              </div>
             </div>
 
             <!-- Left and right controls -->
@@ -192,6 +194,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     
   <script src="js/nzhl.js"></script>
+  <script type="text/javascript" src="js/jquery.flexnav.min.js"></script>
+  <script>
+    $(".flexnav").flexNav();
+    $(".flexnav").flexNav({ 'animationSpeed' : 'fast' });
+  </script>
 
 </body>
 </html>

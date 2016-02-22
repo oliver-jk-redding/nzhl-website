@@ -9,35 +9,29 @@ function drawCarousel() {
 
 function drawMenu() {
   document.querySelector('.navs').innerHTML = 
-    "<li id=\"home-link\"><a href=\"index.html\">Home</a></li>" +
-    "<li id=\"news-link\"><a href=\"news.html\">News</a></li>" +
-    "<li id=\"about-link\"><a href=\"about.html\">About</a></li>" +
-    "<li id=\"contact-link\"><a href=\"#\">Contact</a></li>" +
-    "<li id=\"hobby-link\"><a href=\"hobby.html\">Hobby</a></li>" +
-    "<li id=\"gallery-link\"><a href=\"gallery.html\">Gallery</a></li>" +
-    "<li id=\"store-link\"><a href=\"store.html\">Store</a></li>" +
-    "<a class=\'icon-facebook\' href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\"></a>";
+    "<li id=\"home-link\"><a href=\"index.html\">Home</a></li>" +    
+    "<li id=\"about-link\"><a href=\"about.html\">About</a></li>" +   
+    "<li id=\"community-link\"><a href=\"community.html\">Community</a></li>" +   
+    "<li id=\"hobby-link\"><a href=\"hobby.html\">Hobby</a></li>" +    
+    "<li id=\"store-link\"><a href=\"store.html\">Store</a></li>" +    
+    "<li id=\"fb\"><a href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\">facebook</a></li>" +    
+    "";
+    // <a class=\'icon-facebook\' href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\"></a>
   switch (document.querySelector('title').text) {
     case "NZHL Home":
-      document.getElementById('home-link').className="navs landed";
+      document.getElementById('home-link').className="navs selected";
       break;
     case "NZHL About":
-      document.getElementById('about-link').className="navs landed";
-      break;
-    case "NZHL News":
-      document.getElementById('news-link').className="navs landed";
-      break;
-    case "NZHL Contact":
-      document.getElementById('contact-link').className="navs landed";
-      break;
+      document.getElementById('about-link').className="navs selected";
+      break;  
+    case "NZHL Community":
+      document.getElementById('community-link').className="navs selected";
+      break;       
     case "NZHL Hobby":
-      document.getElementById('hobby-link').className="navs landed";
-      break;
-    case "NZHL Gallery":
-      document.getElementById('gallery-link').className="navs landed";
-      break; 
+      document.getElementById('hobby-link').className="navs selected";
+      break;    
     case "NZHL Store":
-      document.getElementById('store-link').className="navs landed";
+      document.getElementById('store-link').className="navs selected";
       break;  
 }}
 

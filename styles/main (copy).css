@@ -3,6 +3,7 @@ html {
   background-size: 100%;
   background-attachment: fixed;
 }
+
 body{
     overflow-x:hidden;
     background-color: transparent;
@@ -16,10 +17,12 @@ ___________________________*/
   max-height: 100vh;
   overflow: hidden;
 }
+
 .wallpaper {    
   width: 100vw;    
   overflow: hidden;
 }
+
 .hero.wrapper {
   position: absolute;  
   transform: translateY(-200%);
@@ -28,12 +31,14 @@ ___________________________*/
   display: flex;
   align-items: center;
 }
+
 .logo-heading {  
   width: 80vw;  
   margin-left: 6vw;
   margin-right: auto;
   z-index: 3;
 }
+
 .arrow.wrapper {
   width: 100%;
   position: absolute;      
@@ -42,6 +47,7 @@ ___________________________*/
   display: flex;
   z-index: 0; 
 }
+
 .arrow a { 
   margin: 0 auto;      
   width: 6vw;
@@ -53,14 +59,18 @@ ___________________________*/
   overflow: hidden;
   background-image: url('../images/down-arrow-default.png');
   background-size: contain;
-  opacity: 0.7;
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease; 
 }
+
 .arrow a:hover {
-  opacity: 1
+  background-image: url('../images/down-arrow-hover.png');
+}
+
+.arrow a:active {
+  background-image: url('../images/down-arrow-hover.png');
 }
 
 /*Navbar
@@ -69,17 +79,18 @@ ___________________________*/
 .navbar.wrapper {
   position: fixed;
   top: 0; 
-  z-index: 98; 
+  z-index: 100; 
   width: 100%;
   margin: 0;
   padding: 0;
   border-style: none;
   border-radius: 0;  
 }
+
 .row.navbar {
   position: fixed;  
   top: 0;
-  z-index: 98;
+  z-index: 100;
   width:100%;
   border-style: none;
   border-radius: 0;
@@ -89,9 +100,9 @@ ___________________________*/
   color: white;  
   background-color: rgba(0,0,0,0.8);  
 }
+
 #nzhllogo { 
-  position: fixed;
-  z-index: 98;  
+  z-index: 100;  
   width: 6.5vh;
   height: 6.5vh;
   margin: 0.75vh;
@@ -106,117 +117,126 @@ ___________________________*/
   border-style: hidden;
   overflow: hidden;
 }
+
 .navbar ul {  
-  z-index: 98;
+  z-index: 100;
   margin: 0;
-  width: 100%; 
+  height: 8vh;
+  /*max-width: 90%;*/
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  z-index: 100;    
 }
-@media (min-width: 750px) {
-  .navbar ul {
-    width: 86%;
-    height: 8vh;
-    display: inline-block;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: space-betweenaround;
-    justify-content: space-around;
-    margin: auto;
-  }   
-}
+
 .navs li {
-  margin: 0;      
+  margin: 0 1vw;
+  padding: 3vh 0;
+  width: 13.33%;
+  text-align: center;  
   text-transform: uppercase; 
-  list-style-type: none;  
-  z-index: 98;
+  list-style-type: none;
+  font-size: 1.8vh;
+  z-index: 100;
   box-sizing: initial;
-  background-color: rgba(0,0,0,0.9); 
 }
-@media (min-width: 750px) {
-  .navs li {
-    margin: 0 1vw;
-    width: 15vh;
-    text-align: center;
-    font-size: 1.8vh;
-    background: transparent;
-  }   
+
+.navs a {
+  z-index: 100;
+  padding: 3vh 2vw;
+  text-decoration: none;
+  color: white;  
+  box-sizing: initial;
 }
+
 .navs li:hover {  
   text-decoration: none;  
   background-color: rgb(166,12,12);
-  box-shadow: 0px 0px 5px #3c3c3c inset;
+  box-shadow: 0px 0px 5px 2px grey;
   text-shadow: 1px 1px 1px black;  
   -moz-transition: all 0.15s ease;
   -o-transition: all 0.15s ease;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-@media (min-width: 750px) {
-  .navs li:hover {
-    box-shadow: 0px 0px 5px 2px grey;
-  }   
-}
+
 .navs li:active {  
   background-color: rgb(166,12,12);
   box-shadow: 0px 0px 5px 4px grey;
 }
-.navs.selected {
+
+.navs.landed {  
   background-color: rgb(166,12,12);
   box-shadow: 0px 0px 2px 1px grey;
 }
-.navs a {
-  z-index: 98;  
-  text-decoration: none;
-  color: white;  
-  box-sizing: initial;
-  display: block;
-}
+
 a.icon-facebook {
-  display: none;
+  z-index: 100;
+  height: 3.3vh;
+  width: 3.3vh;
+  padding: 0;
+  margin: 1vh;
+  background-image: url('../images/facebook-icon-w.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-style: hidden;
+  border-radius: 50%;
+  -moz-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease; 
+  box-sizing: initial; 
 }
-@media (min-width: 750px) {
-  a.icon-facebook {
-    position: fixed;
-    right: 0;
-    top: 0; 
-    display: inline-block;   
-    z-index: 100;
-    height: 3.3vh;
-    width: 3.3vh;
-    padding: 0;
-    margin: 2.35vh 3vh 2.35vh 1vh;
-    background-image: url('../images/facebook-icon-w.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-style: hidden;
-    border-radius: 50%;
-    -moz-transition: all 0.15s ease;
-    -o-transition: all 0.15s ease;
-    -webkit-transition: all 0.15s ease;
-    transition: all 0.15s ease; 
-    box-sizing: initial; 
-  }  
-  a.icon-facebook:hover {
-    margin: 1.35vh 2vh 1.34vh 0;
-    padding: 1vh;
-    background-image: url('../images/facebook-icon-bw.png');
-    border-style: hidden;
-    border-radius: 50%;
-    box-sizing: initial;
-  }  
+
+a.icon-facebook:hover {
+  z-index: 100;
+  margin: 0;
+  padding: 1vh;
+  background-image: url('../images/facebook-icon-bw.png');
+  border-style: hidden;
+  border-radius: 50%;
+  box-sizing: initial;
 }
-#fb {
-  display: block;    
+
+a.icon-facebook:active {
+  z-index: 100;
+  margin: 0;
+  padding: 0.5vh;
+  background-image: url('../images/facebook-icon-bw.png');
+  border-style: hidden;
+  border-radius: 50%;
+  box-sizing: initial;
 }
-@media (min-width: 750px) {
-  #fb {
-    display: none;
+
+/*Mobile Menu
+___________________________*/
+
+@media (min-width: 400px) {
+  .ul.flexnav.one-page.navs {
+    /*top: 0;*/
   }   
 }
-#fbtxt {
-  visibility: hidden;
-  position: relative;
+
+ul.flexnav.one-page.navs {
+  /*width: 100%;*/
+  /*max-width: 100%;*/
+  /*position: fixed;    */
+  /*left: 0;*/
+  /*max-height: initial;*/
+  /*padding: 0;*/
+  /*background-color: #a6a6a2;*/
+}
+
+.menu-button {
+  position: fixed;
+  padding: 0;
+  height: 8vh;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 /*Main
@@ -226,33 +246,40 @@ ___________________________*/
   padding-top: 8vh;
   z-index: 1;
 }
+
 .content {  
   padding: 1rem 0;
   z-index: 2;
 }
+
 .carousel-indicators {   
   margin-bottom: 0;
   display: none;
 }
+
 @media (min-width: 750px) {
   .carousel-indicators {
     display: inline-block;
   }   
 }
+
 @media (min-width: 1000px) {
   .carousel-indicators {
     bottom: 4rem;
     display: inline-block;
   }   
 }
+
 @media (min-width: 1200px) {
   .carousel-indicators {
     bottom: 6rem;
   }   
 }
+
 .carousel-indicators li.active {
   background-color: rgb(166,12,12);
 }
+
 .carousel-content {
   top: 0;
   width: 100%;
@@ -264,27 +291,32 @@ ___________________________*/
   color: white;  
   z-index: 3;
 }
-@media (min-width: 550px) {
+
+@media (min-width: 560px) {
   .carousel-content {
     padding: 1rem 4.5rem 0rem 4.5rem;         
   }   
 }
-@media (min-width: 750px) {
+
+@media (min-width: 560px) {
   .carousel-content {
     padding: 3rem 7rem 0rem 7rem;        
   }   
 }
+
 @media (min-width: 1000px) {
   .carousel-content {
     padding: 0 10rem;     
     text-align: left;    
   }   
 }
+
 @media (min-width: 1100px) {
   .carousel-content {
     padding: 2.5rem 10rem;     
   }   
 }
+
 @media (min-width: 1150px) {
   .carousel-content {
     top: 50%;
@@ -292,6 +324,7 @@ ___________________________*/
     height: initial;
   }   
 }
+
 .carousel-content h3 {
   margin-top: 2rem;
   margin-bottom: 0rem;
@@ -299,6 +332,7 @@ ___________________________*/
   letter-spacing: .2rem;
   font-weight: 600;
 }
+
 .carousel-content h4 {
   margin-bottom: 2rem;
   font-size: 1.8rem;
@@ -308,15 +342,18 @@ ___________________________*/
   font-weight: 600;
   border-bottom: 1px solid rgb(166,12,12);
 }
+
 .carousel-content p {
   margin-bottom: 2rem;
   display: none;
 }
+
 @media (min-width: 1000px) {
   .carousel-content p {
     display: inline-block; 
   }   
 }
+
 .carousel-content button, .carousel-content button::after {
   margin-bottom: 4rem;
   padding: 1rem;
@@ -333,9 +370,11 @@ ___________________________*/
   text-align: center;
   width: 117px;  
 }
+
 .carousel-content button::after {
   display: none;
 }
+
 .carousel-content button::after {
   content: "";
   margin-bottom: 0;
@@ -348,6 +387,7 @@ ___________________________*/
   height: 16px;
   width: 16px
 }
+
 .carousel-content button:hover, .carousel-content button:hover::after {
   background-color: rgb(166,12,12);
   box-shadow: 0px 0px 3px 0px grey;
@@ -357,10 +397,12 @@ ___________________________*/
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;  
 }
+
 .carousel-content button:active, .carousel-content button:active::after {
   background-color: rgb(166,12,12);
   box-shadow: 0px 0px 5px 1px grey;
 }
+
 @media (min-width: 1000px) {
   .carousel-content button::after {
     display:inline-block;
