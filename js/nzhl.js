@@ -1,7 +1,7 @@
-drawCarousel();
+drawWallpaper();
 drawMenu();
 
-function drawCarousel() {
+function drawWallpaper() {
   var imgWrapper = document.querySelector(".wallpaper.wrapper");
   var imgNum = Math.floor((Math.random() * 9));
   imgWrapper.innerHTML = "<img src=\"images/wallpaper-pics/wallpaper-" + imgNum + ".jpg\" alt=\"NZHL Hobby\" width=\"\" class=\"wallpaper\">";
@@ -15,8 +15,7 @@ function drawMenu() {
     "<li id=\"hobby-link\"><a href=\"hobby.html\">Hobby</a></li>" +    
     "<li id=\"store-link\"><a href=\"store.html\">Store</a></li>" +    
     "<li id=\"fb\"><a href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\">facebook</a></li>" +    
-    "";
-    // <a class=\'icon-facebook\' href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\"></a>
+    "";    
   switch (document.querySelector('title').text) {
     case "NZHL Home":
       document.getElementById('home-link').className="navs selected";
@@ -35,6 +34,7 @@ function drawMenu() {
       break;  
 }}
 
+//carousel set up
 $(function() {
   $('a[href*="#l"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -50,6 +50,7 @@ $(function() {
   });
 });
 
+//scroll instantly to top of content when user scrolls down
 var lastScrollTop = 0;
 $(window).scroll(function(event) {
   var st = $(this).scrollTop();
@@ -61,6 +62,7 @@ $(window).scroll(function(event) {
   }
 });
 
+//scroll instantly between top of content and top of page when clicking on the icons
 function goToByScroll(id){
   $('html,body').animate({
     scrollTop: $("#"+id).offset().top

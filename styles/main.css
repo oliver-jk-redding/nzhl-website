@@ -66,7 +66,7 @@ ___________________________*/
 /*Navbar
 ___________________________*/
 
-.navbar.wrapper {
+.navibar.wrapper {
   position: fixed;
   top: 0; 
   z-index: 98; 
@@ -76,7 +76,7 @@ ___________________________*/
   border-style: none;
   border-radius: 0;  
 }
-.row.navbar {
+.row.navibar {
   position: fixed;  
   top: 0;
   z-index: 98;
@@ -106,13 +106,13 @@ ___________________________*/
   border-style: hidden;
   overflow: hidden;
 }
-.navbar ul {  
+.navibar ul {  
   z-index: 98;
   margin: 0;
   width: 100%; 
 }
 @media (min-width: 750px) {
-  .navbar ul {
+  .navibar ul {
     width: 86%;
     height: 8vh;
     display: inline-block;
