@@ -16,6 +16,7 @@ function drawMenu() {
     "<li id=\"store-link\"><a href=\"store.html\">Store</a></li>" +    
     "<li id=\"fb\"><a href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\">facebook</a></li>" +    
     "";    
+    // <ul><li><a href=\"#\">Community</li></ul>
   switch (document.querySelector('title').text) {
     case "NZHL Home":
       document.getElementById('home-link').className="navs selected";
