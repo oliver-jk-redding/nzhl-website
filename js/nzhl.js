@@ -9,10 +9,12 @@ function drawWallpaper() {
 
 function drawMenu() {
   document.querySelector('.navs').innerHTML = 
-    "<li id=\"home-link\"><a href=\"index.html\">Home</a></li>" +    
+    "<li id=\"home-link\"><a href=\"index.html\">Home</a>" +
+      "<ul><li id=\"gallery\"><a href=\"#\">Gallery</a></li></ul></li>" +    
     "<li id=\"about-link\"><a href=\"about.html\">About</a></li>" +   
     "<li id=\"community-link\"><a href=\"community.html\">Community</a></li>" +   
-    "<li id=\"hobby-link\"><a href=\"hobby.html\">Hobby</a></li>" +    
+    "<li id=\"hobby-link\"><a href=\"hobby.html\">Hobby</a>" +
+      "<ul><li id=\"gallery\"><a href=\"#\">Gallery</a></li></ul></li>" +    
     "<li id=\"store-link\"><a href=\"store.html\">Store</a></li>" +    
     "<li id=\"fb\"><a href=\"https://www.facebook.com/groups/826723854039078/\" target=\"_blank\">facebook</a></li>" +    
     "";    
