@@ -1,0 +1,23 @@
+{
+  "name": "nzhl-website",
+  "version": "0.0.1",
+  "description": "A community website for NZ fans of the Hobbit SBG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliver-jk-redding/nzhl-website.git"
+  },
+  "author": "oredds",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliver-jk-redding/nzhl-website/issues"
+  },
+  "homepage": "https://github.com/oliver-jk-redding/nzhl-website#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "fs": "0.0.2"
+  }
+}
