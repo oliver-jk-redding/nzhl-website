@@ -1,6 +1,6 @@
-var ranImage = Math.floor(Math.random() * 9)
+var getRandomImage = require('./index.js')
 
-$("html").css("background-image", 'url(' + 'images/wallpaper-pics/wallpaper-' + ranImage + '.jpg' + ')');
+$("html").css("background-image", 'url(' + 'images/wallpaper-pics/' + getRandomImage() + ')');
 
 var eventBoxes = document.querySelectorAll('.event-box')
 var eventButtons = document.querySelectorAll('.event-box button')
