@@ -1,6 +1,6 @@
-var getBackgroundImage = require('./index.js')
+var getRandomImage = require('./index.js')
 
-$("html").css("background-image", 'url(' + 'images/wallpaper-pics/' + getBackgroundImage() + ')');
+$("html").css("background-image", 'url(' + 'images/wallpaper-pics/' + getRandomImage() + ')');
 
 var eventBoxes = document.querySelectorAll('.event-box')
 var eventButtons = document.querySelectorAll('.event-box button')
